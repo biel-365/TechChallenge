@@ -1,19 +1,73 @@
-﻿@{
+﻿<div class="hero-container">
+<div class="hero">
+    @{
     ViewData["Title"] = "TechChallenge";
-    var teste = "Ola, bem vindo";
+    var teste = "Tudo pronto? Vamos lá!";
 }
 
 <div class="container text-center mt-5">
-    <h1 class="display-4 fw-bold">@teste</h1>
+   <h1 class="display-4 fw-bold">
+    @teste
+   </h1>
     <p class="lead text-muted">Plataforma de Projetos e Inovação Estudantil</p>
 
-    <hr class="my-4"/>
+   <hr class="my-4"/>
 
-    <p class="fs-5">O lugar onde suas ideias viram projetos reais</p>
+<p class="fs-4 text-secondary mt-4">
+    O lugar onde suas ideias viram projetos reais.
+    Crie equipes, participe de desafios e evolua dentro da plataforma.
+</p>
 
-    <ul class="list-unstyled mt-4 fs-5">
-        <li>✅ Crie equipes e projetos</li>
-        <li>✅ Participe de desafios</li>
-        <li>✅ Ganhe pontos e suba no ranking</li>
-    </ul>
+<div class="row mt-5 g-4">
+
+    <div class="col-lg-4 col-md-6">
+        <div class="feature-card h-100 text-center">
+
+            <div class="feature-icon">
+                <i class="bi bi-people-fill"></i>
+            </div>
+
+            <h4>Equipes</h4>
+
+            <p>
+                Crie equipes, convide participantes e desenvolva projetos em conjunto.
+            </p>
+
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6">
+        <div class="feature-card h-100 text-center">
+
+            <div class="feature-icon">
+                <i class="bi bi-trophy-fill"></i>
+            </div>
+
+            <h4>Desafios</h4>
+
+            <p>
+                Participe de desafios, cumpra objetivos e mostre suas habilidades.
+            </p>
+
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6">
+        <div class="feature-card h-100 text-center">
+
+            <div class="feature-icon">
+                <i class="bi bi-bar-chart-fill"></i>
+            </div>
+
+            <h4>Ranking</h4>
+
+            <p>
+                Ganhe pontos, evolua na plataforma e alcance o topo do ranking.
+            </p>
+
+        </div>
+    </div>
+
+</div>
+
 </div>

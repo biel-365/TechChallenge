@@ -1,16 +1,47 @@
-@model TechChallenge.LoginViewModel;
+@model TechChallenge.LoginViewModel
+
 @{
     ViewData["Title"] = "Login";
 }
-<form asp-action="Login" method="post">
-    <input asp-for="Email" class="form-control"/>
-    <span asp-validation-for="Email"></span>
 
-    <input asp-for="Senha" class="form-control" type="password"/>
-    <span asp-validation-for="Senha"></span>
+<div class="container d-flex justify-content-center align-items-center vh-100">
 
-    <input asp-for="Lembrar" type="checkbox"/>
-    <label asp-for="Lembrar">Lembrar-me</label>
+    <div class="card shadow p-4" style="width: 400px;">
 
-    <button type="submit">Entrar</button>
-</form>
+        <div class="text-center mb-4">
+            <h1>Bem-vindo!</h1>
+            <p class="text-muted">
+                Entre na sua conta do <strong>TechChallenge</strong>
+            </p>
+        </div>
+
+        <form method="post">
+
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label">Email</label>
+                <input asp-for="Email" class="form-control" type="email" placeholder="Digite seu email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Senha" class="form-label">Senha</label>
+                <input asp-for="Senha" class="form-control" type="password" placeholder="Digite sua senha" />
+                <span asp-validation-for="Senha" class="text-danger"></span>
+            </div>
+
+            <div class="form-check mb-3">
+                <input asp-for="Lembrar" class="form-check-input" type="checkbox" />
+                <label asp-for="Lembrar" class="form-check-label">
+                    Lembrar-me
+                </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">
+                Entrar
+            </button>
+
+        </form>
+
+    </div>
+
+</div>

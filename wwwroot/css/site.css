@@ -1,3 +1,36 @@
+.bi {
+    font-family: "bootstrap-icons" !important;
+}
+
+@font-face {
+    font-family: "Titanical Mutant";
+    src: url("../fonts/titanical-mutant.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "Titanical Mutant", sans-serif;
+    background: linear-gradient(180deg, #10a1fc, #0066ff);
+}
+
+.hero {
+    color: #1f2937;
+    max-width: 850px;
+    margin: 70px auto;
+    background: rgba(255,255,255,.92);
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.hero-container {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 html {
   font-size: 14px;
 }
@@ -29,3 +62,47 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 18px;
+    padding: 25px;
+    height: 100%;
+    transition: all .3s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+    cursor: pointer;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.15) rotate(-5deg);
+    color: #0056d6;
+}
+
+.feature-icon {
+    font-size: 3.5rem;
+    color: #0d6efd;
+    margin-bottom: 18px;
+    transition: .3s;
+}
+
+.feature-card h4 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.feature-card p {
+    color: #6c757d;
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+.btn {
+    border-radius: 12px;
+    transition: all .25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+

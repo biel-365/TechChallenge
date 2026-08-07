@@ -3,14 +3,39 @@
 
 @if (SignInManager.IsSignedIn(User))
 {
-    <span>Ola, @User.Identity?.Name!</span>
-    <form asp-action="Logout" method="post">
-        @Html.AntiForgeryToken()
-        <button type="submit">Sair</button>
-    </form>
+    <div class="d-flex align-items-center gap-3">
+
+        <span>
+            👋 Olá, @User.Identity?.Name!
+        </span>
+
+        <form asp-action="Logout" method="post" class="m-0">
+            @Html.AntiForgeryToken()
+
+            <button type="submit" class="btn btn-danger btn-sm">
+                <i class="bi bi-box-arrow-right"></i> Sair
+            </button>
+        </form>
+
+    </div>
 }
 else
 {
-    <a asp-controller="Account" asp-action="Register">Cadastro </a>
-    <a asp-controller="Account" asp-action="Login"> Entrar</a>
+    <div class="d-flex gap-2">
+
+        <a asp-controller="Account"
+           asp-action="Register"
+           class="btn btn-outline-dark">
+            <i class="bi bi-person-plus-fill"></i>
+            Cadastrar
+        </a>
+
+        <a asp-controller="Account"
+           asp-action="Login"
+           class="btn btn-primary">
+            <i class="bi bi-box-arrow-in-right"></i>
+            Entrar
+        </a>
+
+    </div>
 }
