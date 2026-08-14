@@ -9,7 +9,7 @@
             👋 Olá, @User.Identity?.Name!
         </span>
 
-        <form asp-action="Logout" method="post" class="m-0">
+        <form asp-controller="Account" asp-action="Logout" method="post" class="m-0">
             @Html.AntiForgeryToken()
 
             <button type="submit" class="btn btn-danger btn-sm">

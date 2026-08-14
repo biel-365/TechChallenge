@@ -20,7 +20,8 @@ namespace TechChallenge.Controllers
         {
             _context = context;
         }
-
+    
+        [AllowAnonymous]
         // GET: Projetos
         public async Task<IActionResult> Index()
         {

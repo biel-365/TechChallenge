@@ -10,7 +10,7 @@ using TechChallenge;
 
 namespace TechChallenge.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Professor, Admin")]
     public class CategoriasController : Controller
     {
         
@@ -20,6 +20,8 @@ namespace TechChallenge.Controllers
         {
             _context = context;
         }
+
+        [AllowAnonymous]
 
         // GET: Categorias
         public async Task<IActionResult> Index()
