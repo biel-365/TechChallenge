@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">TechChallenge de Gabriel</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -58,7 +58,6 @@
             </div>
         </nav>
     </header>
-    <div class="container">
         <main role="main" class="pb-3">
             <div class="container mt-2">
                 @if (TempData["Success"] != null)
@@ -78,8 +77,6 @@
             </div>            
             @RenderBody()
         </main>
-    </div>
-    
     <footer class="footer mt-5 text-muted text-center">
         TechChallenge &copy; 2026 |  Estilizado por Gabriel Lopes Aroio  
     </footer>
